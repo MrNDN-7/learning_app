@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.cuoiki_code_tutorial.Controllers.TrangChuTacGiaController">
+   <children>
+      <VBox prefHeight="800.0" prefWidth="1000.0">
+         <children>
+            <HBox prefHeight="142.0" prefWidth="1000.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="145.0" prefWidth="824.0" text="Trang Chủ Tác Giả" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="51.0" />
+                     </font>
+                  </Label>
+                  <VBox prefHeight="142.0" prefWidth="177.0">
+                     <children>
+                        <HBox fx:id="hboxAdmin" prefHeight="70.0" prefWidth="157.0">
+                           <children>
+                              <ImageView fx:id="imgAvt" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <image>
+                                    <Image url="@../imageTeachers/image1.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="lblName" prefHeight="18.0" prefWidth="83.0" text="Label">
+                                 <HBox.margin>
+                                    <Insets left="5.0" top="25.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Button fx:id="btnThemKH" mnemonicParsing="false" prefHeight="37.0" prefWidth="138.0" text="Thêm khóa học mới">
+               <VBox.margin>
+                  <Insets left="30.0" />
+               </VBox.margin></Button>
+            <ScrollPane fx:id="scroll" prefHeight="622.0" prefWidth="1000.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="651.0" prefWidth="998.0">
+                     <children>
+                        <VBox fx:id="vBox" prefHeight="200.0" prefWidth="100.0" />
+                     </children></AnchorPane>
+              </content>
+            </ScrollPane>
+         </children></VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" stylesheets="@../CSS/chuongCss.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.cuoiki_code_tutorial.Controllers.ChuongController">
+    <children>
+        <AnchorPane fx:id="header" prefHeight="40.0" prefWidth="1000.0" style="-fx-background-color: #fefefe;">
+            <children>
+                <ImageView fx:id="imglogoCodeLearn" fitHeight="40.0" fitWidth="68.0" layoutX="6.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" />
+                <ImageView fx:id="imglogout" fitHeight="30.0" fitWidth="30.0" layoutX="950.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" />
+            </children>
+        </AnchorPane>
+        <ScrollPane fx:id="scrollPane" layoutX="20" layoutY="62.0" prefHeight="538.0" prefWidth="960.0" stylesheets="@../CSS/chuongContainer.css">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="1000.0">
+                    <children>
+                        <VBox fx:id="chuongContainer" layoutX="8.0" layoutY="-14.0" prefHeight="600.0" prefWidth="1000.0" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </ScrollPane>
+    </children>
+</AnchorPane>

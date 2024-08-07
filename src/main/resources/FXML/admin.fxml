@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="paneAdmin" prefHeight="666.0" prefWidth="775.0" stylesheets="@../CSS/adminDesign.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.cuoiki_code_tutorial.Controllers.DucNhan.AdminController">
+   <children>
+      <BorderPane layoutX="71.0" layoutY="133.0" prefHeight="627.0" prefWidth="868.0" styleClass="semi-top-form" stylesheets="@../CSS/adminDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="45.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutY="31.2" prefHeight="35.0" prefWidth="1106.0" styleClass="semi-top-form" stylesheets="@../CSS/adminDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label fx:id="lblBackHome" layoutX="14.0" layoutY="9.0" text="Quản trị viên">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane prefHeight="582.0" prefWidth="225.0" styleClass="nav-form" stylesheets="@../CSS/adminDesign.css" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="128.0" fitWidth="107.0" layoutX="53.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/background.png" />
+                     </image>
+                  </ImageView>
+                  <Line endX="101.99996948242188" endY="-9.1552734375E-5" layoutX="98.0" layoutY="155.0" startX="-78.80001068115234" startY="-6.103515625E-5" />
+                  <Button fx:id="btnAddStudent" layoutX="25.0" layoutY="171.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="46.0" prefWidth="175.0" text="Học Viên">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnAccount" layoutX="26.0" layoutY="232.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="46.0" prefWidth="173.0" text="Tài Khoản">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <ImageView fx:id="imageDangXuat" fitHeight="36.0" fitWidth="52.0" layoutX="8.0" layoutY="333.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/iconDangXuat.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="620.0" prefWidth="972.0" styleClass="semi-top-form" stylesheets="@../CSS/adminDesign.css" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane fx:id="paneHome" layoutX="1.0" prefHeight="602.0" prefWidth="970.0" stylesheets="@../CSS/adminDesign.css" AnchorPane.bottomAnchor="0.7999999999999545" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.3999999999998636" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane layoutX="6.0" layoutY="14.0" prefHeight="211.0" prefWidth="948.0" stylesheets="@../CSS/adminDesign.css">
+                           <styleClass>
+                              <String fx:value="white-bg" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                           <children>
+                              <AnchorPane layoutX="29.0" layoutY="16.0" prefHeight="173.0" prefWidth="266.0" styleClass="card" stylesheets="@../CSS/adminDesign.css" />
+                              <AnchorPane layoutX="348.0" layoutY="16.0" prefHeight="173.0" prefWidth="266.0" styleClass="card" stylesheets="@../CSS/adminDesign.css" />
+                              <AnchorPane layoutX="670.0" layoutY="16.0" prefHeight="173.0" prefWidth="266.0" styleClass="card" stylesheets="@../CSS/adminDesign.css" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                     <styleClass>
+                        <String fx:value="white-bg" />
+                        <String fx:value="shadow" />
+                        <String fx:value="semi-top-form" />
+                     </styleClass>
+                  </AnchorPane>
+                  <AnchorPane fx:id="paneAddStudent" layoutX="16.8" prefHeight="620.0" prefWidth="982.4" stylesheets="@../CSS/adminDesign.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane layoutX="8.0" layoutY="4.8" prefHeight="268.0" prefWidth="953.0" stylesheets="@../CSS/adminDesign.css" AnchorPane.bottomAnchor="346.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="5.0">
+                           <styleClass>
+                              <String fx:value="shadow" />
+                              <String fx:value="white-bg" />
+                           </styleClass>
+                           <children>
+                              <TableView fx:id="tableHocVien" layoutX="8.0" layoutY="57.0" prefHeight="207.0" prefWidth="938.0" stylesheets="@../CSS/adminDesign.css">
+                                 <columns>
+                                    <TableColumn fx:id="columnMaHV" prefWidth="75.0" text="MaHV" />
+                                    <TableColumn fx:id="columnTen" prefWidth="75.0" text="Tên" />
+                                    <TableColumn fx:id="columnEmail" prefWidth="75.0" text="Email" />
+                                    <TableColumn fx:id="columnSDT" prefWidth="105.60002136230469" text="SĐT" />
+                                    <TableColumn fx:id="columnDiaChi" prefWidth="138.4000244140625" text="Địa Chỉ" />
+                                    <TableColumn fx:id="columnNgaySinh" prefWidth="138.40011596679688" text="Ngày Sinh" />
+                                    <TableColumn fx:id="columnGioiTinh" prefWidth="79.19989013671875" text="Giới Tính" />
+                                    <TableColumn fx:id="columnMaTK" minWidth="0.0" prefWidth="120.800048828125" text="MaTK" />
+                                    <TableColumn fx:id="columnTrangThai" prefWidth="121.5999755859375" text="Trạng Thái" />
+                                 </columns>
+                                 <styleClass>
+                                    <String fx:value="table-vew" />
+                                    <String fx:value="column-header" />
+                                    <String fx:value="column-header-background" />
+                                    <String fx:value="filter" />
+                                 </styleClass>
+                              </TableView>
+                              <TextField layoutX="115.0" layoutY="14.0" prefHeight="35.0" prefWidth="307.0" promptText="Search" />
+                              <Button fx:id="btnXemToanBoDanhSach" layoutX="763.0" layoutY="14.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="169.0" styleClass="btn-access" stylesheets="@../CSS/adminDesign.css" text="Học Viên Ngừng Học">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnLocDanhSach" layoutX="593.0" layoutY="14.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="144.0" styleClass="btn-access" stylesheets="@../CSS/adminDesign.css" text="Học Viên Còn Học">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <Label layoutX="45.0" layoutY="325.0" text="Tên:">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="47.0" layoutY="371.0" text="Email:">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="47.0" layoutY="422.0" text="SĐT:">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtTenHocVien" layoutX="126.0" layoutY="320.0" prefHeight="34.0" prefWidth="197.0" styleClass="text-field" stylesheets="@../CSS/adminDesign.css">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtEmailHocVien" layoutX="126.0" layoutY="366.0" prefHeight="34.0" prefWidth="195.0" styleClass="text-field" stylesheets="@../CSS/adminDesign.css">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtSDTHocVien" layoutX="126.0" layoutY="417.0" prefHeight="34.0" prefWidth="194.0" styleClass="text-field" stylesheets="@../CSS/adminDesign.css">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="388.0" layoutY="324.0" text="Địa Chỉ">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtDiaChiHocVien" layoutX="469.0" layoutY="319.0" prefHeight="34.0" prefWidth="190.0" styleClass="text-field" stylesheets="@../CSS/adminDesign.css">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="388.0" layoutY="371.0" text="Giới Tính">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="checkGioiTinhHocVien" layoutX="470.0" layoutY="369.0" prefWidth="150.0" promptText="Chọn" styleClass="text-field" stylesheets="@../CSS/adminDesign.css" />
+                        <AnchorPane layoutX="733.0" layoutY="324.0" prefHeight="183.0" prefWidth="206.0" stylesheets="@../CSS/adminDesign.css">
+                           <styleClass>
+                              <String fx:value="shadow" />
+                              <String fx:value="white-bg" />
+                           </styleClass>
+                           <children>
+                              <ImageView fx:id="imageHocVien" fitHeight="193.0" fitWidth="207.0" pickOnBounds="true" preserveRatio="true" />
+                              <Button fx:id="btnThemAnhHocVien" layoutX="3.0" layoutY="193.0" mnemonicParsing="false" prefWidth="201.0" text="Thêm Ảnh" />
+                           </children>
+                        </AnchorPane>
+                        <DatePicker fx:id="txtNgaySinhHocVien" layoutX="130.0" layoutY="469.0" prefHeight="27.0" prefWidth="187.0" stylesheets="@../CSS/adminDesign.css" />
+                        <Label layoutX="47.0" layoutY="472.0" text="Ngày Sinh">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="388.0" layoutY="419.0" text="Trạng Thái">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="checkTrangThaiHocVien" layoutX="470.0" layoutY="417.0" prefWidth="150.0" promptText="Chọn" styleClass="text-field" stylesheets="@../CSS/adminDesign.css" />
+                        <Button fx:id="btnThemHocVien" layoutX="45.0" layoutY="535.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="79.0" styleClass="btn-access" stylesheets="@../CSS/adminDesign.css" text="Thêm">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnCapNhatHocVien" layoutX="168.0" layoutY="535.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="75.0" styleClass="btn-access" stylesheets="@../CSS/adminDesign.css" text="Sửa">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnXoaHocVien" layoutX="285.0" layoutY="534.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="79.0" styleClass="btn-access" stylesheets="@../CSS/adminDesign.css" text="Xóa">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnXoaDuLieu" layoutX="400.0" layoutY="534.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="144.0" styleClass="btn-access" stylesheets="@../CSS/adminDesign.css" text="Xóa Dữ Liệu Nhập">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnMoveTaiKhoan" layoutX="577.0" layoutY="534.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="111.0" styleClass="btn-access" stylesheets="@../CSS/adminDesign.css" text="Tài Khoản">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <styleClass>
+                        <String fx:value="white-bg" />
+                        <String fx:value="shadow" />
+                        <String fx:value="semi-top-form" />
+                     </styleClass>
+                  </AnchorPane>
+                  <AnchorPane fx:id="paneAccount" layoutX="182.0" layoutY="60.0" prefHeight="620.0" prefWidth="965.6" stylesheets="@../CSS/adminDesign.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <styleClass>
+                        <String fx:value="white-bg" />
+                        <String fx:value="shadow" />
+                        <String fx:value="semi-top-form" />
+                     </styleClass>
+                     <children>
+                        <Button fx:id="btnTaiKhoanHoatDong" layoutX="495.0" layoutY="14.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="198.0" styleClass="btn-access" stylesheets="@../CSS/adminDesign.css" text="Tài Khoản Hoạt Động">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnTaiKhoanNgungHoatDong" layoutX="713.0" layoutY="14.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="221.0" styleClass="btn-access" stylesheets="@../CSS/adminDesign.css" text="Tài Khoản Ngừng Hoạt Động">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="txtTenDangNhap" layoutX="692.0" layoutY="185.0" stylesheets="@../CSS/adminDesign.css">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtMatKhau" layoutX="692.0" layoutY="267.0" stylesheets="@../CSS/adminDesign.css">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <ComboBox fx:id="checkTrangThaiTaiKhoan" layoutX="693.0" layoutY="338.0" prefHeight="32.0" prefWidth="184.0" promptText="Chọn" stylesheets="@../CSS/adminDesign.css" />
+                        <Label layoutX="507.0" layoutY="183.0" text="Tên Đăng Nhập:">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="511.0" layoutY="265.0" text="Mật Khẩu:">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="511.0" layoutY="335.0" text="Trạng Thái:">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="tableTaiKhoan" layoutX="4.0" layoutY="15.0" prefHeight="598.0" prefWidth="470.0" stylesheets="@../CSS/adminDesign.css">
+                          <columns>
+                            <TableColumn fx:id="columnMaTKAccount" prefWidth="75.0" text="MaTK" />
+                            <TableColumn fx:id="columnTenDangNhap" prefWidth="145.60004425048828" text="Tên Đăng Nhập" />
+                              <TableColumn fx:id="columnMatKhau" prefWidth="110.40003967285156" text="Mật Khẩu" />
+                              <TableColumn fx:id="columnTrangThaiTaiKhoan" prefWidth="135.199951171875" text="Trạng Thái" />
+                          </columns>
+                           <styleClass>
+                              <String fx:value="table-vew" />
+                              <String fx:value="column-header" />
+                              <String fx:value="column-header-background" />
+                           </styleClass>
+                        </TableView>
+                        <Label layoutX="507.0" layoutY="115.0" text="Mã Tài Khoản:">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelMaTK" layoutX="693.0" layoutY="115.0" text="MATK">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnCapNhatTaiKhoan" layoutX="514.0" layoutY="428.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="162.0" styleClass="btn-access" stylesheets="@../CSS/adminDesign.css" text="Cập Nhật">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnClearDuLieuTaiKhoan" layoutX="720.0" layoutY="428.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="162.0" styleClass="btn-access" stylesheets="@../CSS/adminDesign.css" text="Xóa Dữ Liệu Nhập">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="paneAddLesson" prefHeight="620.0" prefWidth="971.2" stylesheets="@../CSS/adminDesign.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <styleClass>
+                        <String fx:value="shadow" />
+                        <String fx:value="white-bg" />
+                        <String fx:value="semi-top-form" />
+                     </styleClass>
+                     <children>
+                        <Label layoutX="141.0" layoutY="235.0" text="CHÚNG TÔI SẼ SỚM PHÁT TRIỂN CHỨC NĂNG NÀY, BẠN HÃY CHỜ ĐỢI NHÉ!!!!">
+                           <font>
+                              <Font name="System Bold Italic" size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="paneChangeAccount" layoutX="85.0" layoutY="50.0" prefHeight="496.0" prefWidth="781.0" stylesheets="@../CSS/adminDesign.css" visible="false" AnchorPane.bottomAnchor="74.79999999999995" AnchorPane.leftAnchor="85.0" AnchorPane.rightAnchor="101.39999999999986" AnchorPane.topAnchor="50.0">
+                     <styleClass>
+                        <String fx:value="white-bg" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                     <children>
+                        <TextField fx:id="txtTenDangNhapHocVien" layoutX="376.0" layoutY="174.0" stylesheets="@../CSS/adminDesign.css">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtMatKhauHocVien" layoutX="376.0" layoutY="256.0" stylesheets="@../CSS/adminDesign.css">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <ComboBox fx:id="checkTrangThaiTaiKhoanHocVien" layoutX="377.0" layoutY="327.0" prefHeight="32.0" prefWidth="184.0" promptText="Chọn" stylesheets="@../CSS/adminDesign.css" />
+                        <Label layoutX="191.0" layoutY="172.0" text="Tên Đăng Nhập:">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="195.0" layoutY="254.0" text="Mật Khẩu:">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="195.0" layoutY="324.0" text="Trạng Thái:">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="191.0" layoutY="104.0" text="Mã Tài Khoản:">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelMaTKHocVien" layoutX="377.0" layoutY="104.0" text="MATK">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnCapNhatTaiKhoanHocVien" layoutX="198.0" layoutY="417.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="162.0" styleClass="btn-access" stylesheets="@../CSS/adminDesign.css" text="Cập Nhật">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnClearDuLieuTaiKhoanHocVien" layoutX="404.0" layoutY="417.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="162.0" styleClass="btn-access" stylesheets="@../CSS/adminDesign.css" text="Xóa Dữ Liệu Nhập">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="271.0" layoutY="33.0" text="Thông Tin Tài Khoản">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnBackTaiKhoan" layoutX="740.0" layoutY="14.0" mnemonicParsing="false" text="X" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

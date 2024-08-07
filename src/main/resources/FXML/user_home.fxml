@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.cuoiki_code_tutorial.Controllers.UserHomeController">
+    <AnchorPane fx:id="header" prefHeight="40.0" prefWidth="1000.0">
+        <children>
+            <ImageView fx:id="imglogoCodeLearn" fitHeight="40.0" fitWidth="68.0" layoutX="22.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imglogout" fitHeight="30.0" fitWidth="30.0" layoutX="950.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" />
+        </children>
+    </AnchorPane>
+    <AnchorPane fx:id="account" layoutX="0" layoutY="40" prefHeight="160.0" prefWidth="1000.0">
+        <children>
+            <AnchorPane fx:id="paneAccount" layoutX="63.0" layoutY="23.0" prefHeight="113.0" prefWidth="274.0">
+                <children>
+                    <ProgressBar fx:id="progressBar_expAcc" layoutX="37.0" layoutY="79.0" prefWidth="200.0" progress="0.0" />
+                    <Label fx:id="lbl_username" layoutX="37.0" layoutY="26.0" prefHeight="18.0" prefWidth="144.0" text="Username" textFill="WHITE">
+                  <font>
+                     <Font size="18.0" />
+                  </font></Label>
+                </children>
+            </AnchorPane>
+            <Label layoutX="412.0" layoutY="48.0" text="Khóa học" textFill="WHITE" />
+            <Label fx:id="lblDangHoc" layoutX="410.0" layoutY="66.0" text="2/10" textFill="#f6ff00">
+                <font>
+                    <Font size="20.0" />
+                </font>
+            </Label>
+            <ProgressBar fx:id="progressBar_KhoaHoc" layoutX="410.0" layoutY="102.0" prefHeight="9.0" prefWidth="179.0" progress="0.0" />
+            <Label layoutX="737.0" layoutY="48.0" text="Thành tích của bạn" textFill="WHITE" />
+        </children>
+    </AnchorPane>
+    <AnchorPane fx:id="courses" layoutX="0" layoutY="200" prefHeight="330.0" prefWidth="1000.0">
+        <AnchorPane fx:id="SuggestedCourses" layoutX="60.0" layoutY="70" prefHeight="280.0" prefWidth="870.0">
+            <children>
+
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="CompleteCourses" layoutX="60" layoutY="70" prefHeight="280.0" prefWidth="870.0" visible="false">
+
+        </AnchorPane>
+        <AnchorPane fx:id="StudyingCourses" layoutX="60" layoutY="70" prefHeight="280.0" prefWidth="870.0" visible="false">
+
+        </AnchorPane>
+        <Label layoutX="97.0" text="Khóa học">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label fx:id="lbl_SuggestedCourse" layoutX="97.0" layoutY="34.0" text="Khóa học gợi ý" />
+        <Label fx:id="lbl_StudyingCourse" layoutX="211.0" layoutY="34.0" text="Đang học" />
+        <Label fx:id="lbl_CompleteCourse" layoutX="294.0" layoutY="34.0" text="Đã hoàn thành" />
+        <Line fx:id="line_SuggestedCourse" endX="-14.79998779296875" endY="0.5999908447265625" layoutX="191.0" layoutY="51.0" startX="-94.0" startY="0.5999908447265625" stroke="blue" strokeWidth="2" />
+        <Line fx:id="line_CompleteCourse" endX="-15.399993896484375" layoutX="394.0" layoutY="50.0" startX="-100.0" stroke="blue" strokeWidth="2" visible="false" />
+        <Line fx:id="line_StudyingCourse" endX="57.600006103515625" endY="-16.400009155273438" layoutX="208.0" layoutY="68.0" startX="-1.0" startY="-16.400009155273438" stroke="blue" strokeWidth="2" visible="false" />
+      <Button fx:id="btnShowAllCourse" layoutX="900.0" layoutY="14.0" mnemonicParsing="false" text="Xem tất cả" />
+    </AnchorPane>
+    <AnchorPane fx:id="skill" layoutX="0" layoutY="550.0" prefHeight="50.0" prefWidth="1000.0">
+
+    </AnchorPane>
+
+</AnchorPane>

@@ -1,0 +1,18 @@
+#vBoxKhoaHoc{
+    -fx-border-radius: 16px;
+    -fx-border-color: black;
+    -fx-end-margin: 20pt;
+}
+#img{
+    -fx-background-color: white; /* Bo tròn góc bên phải */
+    -fx-border-radius: 0 8px 8px 0;
+}
+.label{
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+}
+.button{
+    -fx-background-color: #DFECDD;
+    -fx-background-color: #fdd734;
+    -fx-font-family: cursive;
+}

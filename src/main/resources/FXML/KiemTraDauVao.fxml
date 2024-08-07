@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.cuoiki_code_tutorial.Controllers.KiemTraDauVao">
+
+    <AnchorPane fx:id="header" prefHeight="40.0" prefWidth="1000.0" style="-fx-background-color: #fefefe;">
+        <children>
+            <ImageView fx:id="imglogoCodeLearn" fitHeight="40.0" fitWidth="68.0" layoutX="6.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imglogout" fitHeight="30.0" fitWidth="30.0" layoutX="950.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" />
+        </children>
+    </AnchorPane>
+    <HBox alignment="CENTER" layoutX="200.0" layoutY="70.0" prefHeight="50.0" prefWidth="600.0" spacing="10">
+        <children>
+            <Label fx:id="courseNameLabel">
+                <font>
+                    <Font name="Consolas" size="24.0" />
+                </font>
+            </Label>
+            <Label fx:id="timerLabel" layoutX="750.0" layoutY="95.0" />
+        </children>
+
+    </HBox>
+
+
+    <VBox fx:id="questionPane" alignment="TOP_CENTER" layoutX="200.0" layoutY="150.0" prefHeight="250.0" prefWidth="600.0" spacing="10">
+        <children>
+
+        </children>
+
+    </VBox>
+
+
+
+    <Button fx:id="prevButton" layoutX="200.0" layoutY="420.0" onAction="#showPreviousQuestion" prefHeight="32.0" prefWidth="100.0" text="Câu trước" visible="false">
+        <font>
+            <Font name="Consolas" size="16.0" />
+        </font>
+    </Button>
+    <Button fx:id="nextButton" layoutX="700.0" layoutY="420.0" onAction="#showNextQuestion" prefHeight="32.0" prefWidth="100.0" text="Câu tiếp">
+        <font>
+            <Font name="Consolas" size="16.0" />
+        </font>
+    </Button>
+    <Button fx:id="submit" layoutX="866.0" layoutY="452.0" onAction="#submit" prefHeight="32.0" prefWidth="100.0" text="Nộp bài">
+        <font>
+            <Font name="Consolas" size="16.0" />
+        </font>
+    </Button>
+    <Label fx:id="ketqua" layoutX="420.0" layoutY="454.0" prefHeight="28.0" prefWidth="159.0" text="Kết quả" visible="false">
+        <font>
+            <Font name="Consolas" size="18.0" />
+        </font>
+    </Label>
+
+</AnchorPane>

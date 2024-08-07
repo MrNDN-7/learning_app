@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.cuoiki_code_tutorial.Controllers.ChinhSuaBaiHocController">
+   <children>
+      <ScrollPane>
+         <content>
+            <VBox alignment="CENTER" prefHeight="800.0" prefWidth="1000.0" spacing="10.0">
+               <children>
+                  <HBox prefHeight="65.0" prefWidth="1000.0">
+                     <children>
+                        <Label fx:id="lableTitle" alignment="CENTER" prefHeight="43.0" prefWidth="954.0" text="Bài học">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="74.0" prefWidth="1000.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" prefHeight="74.0" prefWidth="335.0" text="Tên Bài Học: " textAlignment="CENTER" />
+                        <TextField fx:id="txtTenBaiHoc" prefHeight="74.0" prefWidth="392.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="488.0" prefWidth="1000.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" prefHeight="74.0" prefWidth="211.0" text="Nội dung bài học: " textAlignment="CENTER" />
+                        <HTMLEditor fx:id="htmlEditor" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" prefHeight="462.0" prefWidth="640.0" />
+                     </children>
+                     <padding>
+                        <Insets top="20.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="48.0" prefWidth="1000.0">
+                     <children>
+                        <Label text="Thời lượng: " />
+                        <Slider fx:id="scrollTL" blockIncrement="5.0" majorTickUnit="1.0" max="60.0" min="10.0" minorTickCount="1" prefHeight="3.0" prefWidth="140.0" />
+                        <Label fx:id="lblTL" text="Label" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="690.0" prefHeight="48.0" prefWidth="1000.0">
+                     <children>
+                        <Label text="Giới hạn kí tự cho bài học: " />
+                        <Slider fx:id="scrollGH" blockIncrement="5.0" majorTickUnit="1.0" max="200.0" minorTickCount="1" />
+                        <Label fx:id="lblGHKT" text="Label" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="698.0" prefHeight="42.0" prefWidth="1000.0">
+                     <children>
+                        <Label text="Mức độ khó:   " />
+                        <ComboBox fx:id="cbDoKho" prefWidth="150.0" promptText="Dễ" />
+                     </children>
+                  </HBox>
+                  <Button fx:id="btnSave" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" text="Lưu">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnCancel" mnemonicParsing="false" prefHeight="25.0" prefWidth="99.0" text="Hủy">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnTestCase" alignment="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="285.0" text="Testcase">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin></Button>
+               </children>
+            </VBox>
+         </content>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </ScrollPane>
+   </children>
+</AnchorPane>

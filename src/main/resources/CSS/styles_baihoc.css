@@ -1,0 +1,66 @@
+/* styles_baihoc.css */
+.background {
+    -fx-background-color: #ffffff;
+
+}
+#header
+{
+    -fx-background-color: #ebebeb;
+    -fx-padding: 2px;
+}
+#btnMucDo
+{
+    -fx-background-color: #B7E4A7  ;
+    -fx-text-fill: #333333 ;
+    -fx-font-size: 14px;
+    -fx-background-radius: 30px;
+}
+#wViewBaiHoc
+{
+    -fx-background-color: lightgray;
+}
+.web-view
+{
+    -fx-background-color: #269dbf;
+}
+
+#lblkiemThu
+{
+    -fx-text-fill: white;
+}
+
+#btnBack
+{
+    /*-fx-font-size: 14px; !* Kích thước phông chữ *!*/
+    -fx-background-color: transparent; /* Màu nền */
+    -fx-text-fill: black; /* Màu văn bản */
+    -fx-background-image: url('../Image/back.png');
+    -fx-background-size: contain;
+    -fx-background-position: center center;
+
+
+}
+
+#imageView {
+    -fx-fit-width: 200; /* Chiều rộng */
+    -fx-fit-height: 150; /* Chiều cao */
+}
+
+#lblTenBaiHoc {
+
+
+    -fx-background-color: transparent;
+
+}
+.hbox {
+
+}
+.button {
+
+}
+
+#codeLayout
+{
+    -fx-background-color: #ffffff;
+
+}

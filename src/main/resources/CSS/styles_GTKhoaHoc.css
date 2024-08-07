@@ -1,0 +1,17 @@
+#header {
+    -fx-background-color: #ffffff;
+}
+.anchorOverview{
+    -fx-background-color: linear-gradient(to bottom right, #8A2BE2, #FF00FF);
+}
+.logoCodeLearn
+{
+    -fx-background-color: linear-gradient(to bottom right, #e94af5, #4268e8);
+    /*!*-fx-background-image: url("/Image/logo_codelearn.png");*!*/
+    /*-fx-background-size: cover;*/
+    /*-fx-background-position: center;*/
+}
+.background
+{
+    /*-fx-background-color: linear-gradient(to bottom right, #e94af5, #4268e8);*/
+}

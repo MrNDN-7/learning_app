@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="602.0" prefWidth="832.0" stylesheets="@../CSS/login_registerDesign.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.cuoiki_code_tutorial.Controllers.DucNhan.LoginController">
+   <children>
+      <AnchorPane layoutY="-4.0" prefHeight="595.0" prefWidth="434.0" stylesheets="@../CSS/login_registerDesign.css">
+         <children>
+            <ImageView fitHeight="598.0" fitWidth="418.0" layoutX="8.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/background.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="paneDangNhap" layoutX="434.0" prefHeight="602.0" prefWidth="409.0">
+         <children>
+            <TextField fx:id="txtTenDangNhap" layoutX="76.0" layoutY="227.0" prefHeight="40.0" prefWidth="242.0" promptText="Tên Đăng Nhập" styleClass="text-field" stylesheets="@../CSS/login_registerDesign.css">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Button fx:id="btnDangNhap" layoutX="112.0" layoutY="359.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="170.0" styleClass="login-btn" stylesheets="@../CSS/login_registerDesign.css" text="Đăng Nhập">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <RadioButton fx:id="rdHocVien" layoutX="81.0" layoutY="180.0" mnemonicParsing="false" text="Học Viên">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="rdQuanTriVien" layoutX="213.0" layoutY="180.0" mnemonicParsing="false" text="Quản Trị Viên">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </RadioButton>
+            <Label layoutX="112.0" layoutY="89.0" text="Đăng Nhập" textFill="#518486">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="94.0" layoutY="453.0" text="Bạn Chưa Có Tài Khoản?">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelDangKi" layoutX="258.0" layoutY="452.0" prefHeight="22.0" prefWidth="76.0" text="Đăng Ký" textFill="#69bfbf">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="112.0" layoutY="427.0" text="Quên ">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelQuenMatKhau" layoutX="151.0" layoutY="427.0" prefHeight="22.0" prefWidth="150.0" text="Tài Khoản/Mật Khẩu?" textFill="#31bca2">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="txtMatKhau" layoutX="76.0" layoutY="286.0" prefHeight="40.0" prefWidth="242.0" promptText="Mật Khẩu" />
+            <ImageView fx:id="viewPass" fitHeight="22.0" fitWidth="22.0" layoutX="330.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/view.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="hidePass" fitHeight="22.0" fitWidth="22.0" layoutX="330.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../Image/hide.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="txtShowPass" layoutX="76.0" layoutY="286.0" prefHeight="40.0" prefWidth="242.0" visible="false" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
